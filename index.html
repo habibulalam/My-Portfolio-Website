@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="Habibul Alam - Full Stack Developer Portfolio">
+    <meta name="description"
+        content="Discover Habibul Alam's professional portfolio showcasing expertise in full-stack development, web applications, and innovative solutions. Explore projects, skills, and achievements.">
+    <meta name="keywords"
+        content="Habibul Alam, Full Stack Developer, Portfolio, Web Development, React.js, Frontend, Backend, Software Engineer, Professional Portfolio, Innovative Solutions, habibul alam, portfolio website">
+    <meta name="author" content="habibul alam">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="./assets/img/favicon.png"> -->
+    <title>Habib's Portfolio</title>
+    <!--=================== Main CSS ====================-->
+    <link rel="stylesheet" href="main.css">
+    <!--=================== Google Fonts ====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!--=================== Remixicons ====================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--=================== SwiperJS CSS ====================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!--=================== Fontawsome CSS ====================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--=================== Tailwind CSS ====================-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!--=================== Header ====================-->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="nav__brand">
+                    <i class="ri-code-s-slash-line"></i>Habibul<Span>Alam</Span>
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#hero" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">Qualification</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#project" class="nav__link">Projects</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle">
+                    <i id="nav-toggle" class="ri-menu-3-line"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--=================== main ====================-->
+    <main class="main">
+        <!--=================== Hero ====================-->
+        <section id="hero" class="hero pt-32">
+            <div class="container">
+                <div class="d-grid hero__wrapper">
+                    <div class="hero__content ">
+                        <h1 class="hero__title">Hi, I am Habibul Alam</h1>
+                        <div>
+                            <h2 class="h-14" id="typewriter"
+                                style="font-size: 25px; font-weight: bold; color: #1e90ff; border-right: 2px solid #1e90ff; white-space: nowrap; overflow: hidden; display: inline-block;">
+                            </h2>
+                        </div>
+                        <p style="margin-top:15px;" class="hero__description">🌟 Passionate Web Developer and
+                            Computer Technology student
+                            at Daffodil Institute of IT,Chattogram 🎓, dedicated to crafting user-centric websites and
+                            web apps 💻.
+                            Proficient in many programming languages 👨‍💻, delivering top-notch, responsive, and
+                            visually stunning websites 🌐. A quick learner and problem-solving enthusiast 🤔, driven by
+                            creativity and strategic thinking 💡. Currently exploring opportunities to contribute skills
+                            and collaborate on dynamic projects 🤝.
+                        </p>
+                        <a href="mailto:habibhassan.stt20@gmail.com" class="btn--primary"
+                            style="padding:1.5rem 4rem;margin-bottom:10px;display:inline-block;">Hire Me!</a>
+                        <div class="hero__info">
+                            <div class="hero__info-wrapper">
+                                <p class="hero__info-number">20+</p>
+                                <h2 class="hero__info-title">Projects<br>Completed</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./assets/img/Big-Cover(4x4)1.jpg" alt="Habib Photo"
+                        class="hero__img border border-white rounded-full size-[402px]">
+                </div>
+            </div>
+        </section>
+        <!--=================== About ====================-->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <span class="section__subtitle">Who am I</span>
+                </div>
+                <div class="d-grid about__wrapper">
+                    <div class="about__content">
+                        <h3 class="about__title">I'm a Professional and Experienced Web Developer.</h3>
+                        <p class="about__description">I have a strong focus on creating intuitive and efficient software
+                            solutions to meet the needs of clients and end-users.
+                            When I'm not coding, I love to stay up-to-date with the latest technology trends and
+                            imporiving my skills.
+                            I'm always eager to take new challenges and work with a team to deliver exceptional results.
+                        </p>
+                        <a href="#project" class="btn btn--primary">Know More</a>
+                    </div>
+                    <div class="skills">
+                        <h3 class="skills__title">Technologies I've been working with:</h3>
+                        <div class="skills__wrapper">
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Backend</h4>
+                                <ul class="skills__list">
+
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Express.js</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Node.js</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        MongoDB</li>
+
+                                </ul>
+                            </div>
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Frontend</h4>
+                                <ul class="skills__list">
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        HTML</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        CSS</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        JavaScript</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Tailwind CSS</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=================== Qualification ====================-->
+        <section id="qualification" class="section qualification">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Qualification</h2>
+                    <span class="section__subtitle">Achievements & Education</span>
+                </div>
+                <!--============== Professional Experience ============-->
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-briefcase-fill"></i>
+                        Achievements
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <!-- Experience 1-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title text-4xl font-semibold">Industrial Attachment</h3>
+                            <h3 class="qualification__title text-gray-400">Daffodil Computers LTD, Chattogram</h3>
+                            <p class="qualification__description">I have competed the industrial attachment from this
+                                Company. I have done the industrial attachment in 3 category. The categories are
+                                Graphics Design, Web Development, Hardware. From this company I learn how to adapt with
+                                work industry with those 3 sector.
+                            </p>
+                            <span class="qualification__date">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!--============== Education ============-->
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-booklet-fill"></i>
+                        Education
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <!-- Education 1-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title text-4xl font-semibold">Diploma in Computer Technology</h3>
+                            <h4 class="qualification__title text-gray-400">Daffodil Institute of IT, Chattogram</h4>
+                            <p class="qualification__description">As a computer science student, I have a strong
+                                foundation in object-oriented algorithms, data structures, software design and
+                                Development.
+                                My coursework has provided me with a deep understanding of the principles and practices
+                                of computer technology,
+                                and I have honed my programming skills through various projects and assignments.
+                            </p>
+                            <span class="qualification__date">2020 - 2024</span>
+                        </div>
+                        <!-- Education 2-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title text-4xl font-semibold">SSC</h3>
+                            <h4 class="qualification__title text-gray-400">Central Public School & College</h4>
+                            <p class="qualification__description">I have a strong science background from SSC, with a
+                                solid foundation in physics, chemistry, and mathematics. My education has developed my
+                                analytical skills and a keen interest in applying scientific concepts practically,
+                                fostering a desire for further learning and growth.</p>
+                            <span class="qualification__date">2020</span>
+                        </div>
+                        <!-- Education 3-->
+                        <!-- <div class="qualification__item">
+                            <h3 class="qualification__title">Matriculation</h3>
+                            <h4 class="qualification__title">Fatimiyah Boys School</h4>
+                            <p class="qualification__description">
+                            </p>
+                            <span class="qualification__date">2017</span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="qualification__footer">
+                    <p class="qualification__footer-text">See my full resume</p>
+                    <a href="https://drive.google.com/file/d/1ssnIVl-os0LzFqy1dxsuN_kfnI4xeRKR/view?usp=sharing"
+                        target="_blank" class="btn btn--primary">Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!--=================== services ====================-->
+        <section id="services" class="section services" style="padding: 80px 0; background-color: inherit;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+                <h2 style="font-size: 32px; font-weight: bold; text-align: center; color: white; margin-bottom: 32px;">
+                    My Skills
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                    <!-- HTML -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-code-s-slash-line" style="font-size: 40px; color: #e34c26;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            HTML
+                        </h3>
+                        <p style="color: #718096; text-align: center;">The standard markup language for creating web
+                            pages.</p>
+                    </div>
+
+                    <!-- CSS -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-paint-brush-line" style="font-size: 40px; color: #264de4;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            CSS
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Styling the web with creative and responsive
+                            designs.</p>
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-20 text-blue-400">
+                                <path
+                                    d="M11.9996 4.85999C8.82628 4.85999 6.84294 6.44665 6.04961 9.61999C7.23961 8.03332 8.62794 7.43832 10.2146 7.83499C11.12 8.06109 11.7666 8.71757 12.4835 9.44545C13.6507 10.6295 15.0004 12 17.9496 12C21.1229 12 23.1063 10.4133 23.8996 7.23998C22.7096 8.82665 21.3213 9.42165 19.7346 9.02499C18.8292 8.79889 18.1827 8.1424 17.4657 7.41452C16.2995 6.23047 14.9498 4.85999 11.9996 4.85999ZM6.04961 12C2.87628 12 0.892943 13.5867 0.0996094 16.76C1.28961 15.1733 2.67794 14.5783 4.26461 14.975C5.17 15.2011 5.81657 15.8576 6.53354 16.5855C7.70073 17.7695 9.05039 19.14 11.9996 19.14C15.1729 19.14 17.1563 17.5533 17.9496 14.38C16.7596 15.9667 15.3713 16.5617 13.7846 16.165C12.8792 15.9389 12.2326 15.2824 11.5157 14.5545C10.3495 13.3705 8.99982 12 6.04961 12Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Tailwind CSS
+                        </h3>
+                        <p style="color: #718096; text-align: center;">A utility-first CSS framework for rapid UI
+                            development.</p>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-code-line" style="font-size: 40px; color: #f7df1e;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            JavaScript
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Enabling dynamic and interactive web
+                            functionality.</p>
+                    </div>
+
+                    <!-- React -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-reactjs-line" style="font-size: 40px; color: #61dafb;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            React
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Building scalable and reusable UI components
+                            efficiently.</p>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="fa-brands fa-node-js" style="font-size: 40px; color: #83cd29;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Node.js
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Building scalable server-side applications with
+                            JavaScript.</p>
+                    </div>
+
+                    <!-- Express.js -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor"
+                                class="size-20 text-gray-200">
+                                <path
+                                    d="M49.729 11h-.85c-1.051 0-2.041.49-2.68 1.324l-8.7 11.377-8.7-11.377C28.162 11.49 27.171 11 26.121 11h-.85l10.971 14.346L25.036 40h.85c1.051 0 2.041-.49 2.679-1.324L37.5 26.992l8.935 11.684C47.073 39.51 48.063 40 49.114 40h.85L38.758 25.346 49.729 11zM21.289 34.242c-2.554 3.881-7.582 5.87-12.389 4.116C4.671 36.815 2 32.611 2 28.109L2 27h12v0h11l0-4.134c0-6.505-4.818-12.2-11.295-12.809C6.273 9.358 0 15.21 0 22.5l0 5.573c0 5.371 3.215 10.364 8.269 12.183 6.603 2.376 13.548-1.17 15.896-7.256 0 0 0 0 0 0h-.638C22.616 33 21.789 33.481 21.289 34.242zM2 22.5C2 16.71 6.71 12 12.5 12S23 16.71 23 22.5V25H2V22.5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Express.js
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Simplifying backend development with a minimal
+                            framework.</p>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-database-2-line" style="font-size: 40px; color: #47a248;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            MongoDB
+                        </h3>
+                        <p style="color: #718096; text-align: center;">A NoSQL database for modern and scalable
+                            applications.</p>
+                    </div>
+                    <!-- Git/GitHub -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-git-branch-line" style="font-size: 40px; color: #f34f29;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            Git/GitHub
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Version control and collaborative development
+                            simplified.</p>
+                    </div>
+
+                    <!-- MS Office -->
+                    <div
+                        style="background-color: black; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                            <i class="ri-file-text-line" style="font-size: 40px; color: #d83b01;"></i>
+                        </div>
+                        <h3
+                            style="font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 8px; color: white;">
+                            MS Office
+                        </h3>
+                        <p style="color: #718096; text-align: center;">Efficient tools for document, spreadsheet, and
+                            presentation creation.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--=================== Projects ====================-->
+        <section id="project" class="section project">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Projects</h2>
+                    <span class="section__subtitle">My recent work</span>
+                </div>
+                <div class="d-grid project__wrapper">
+                    <!--============== project 1 =============-->
+                    <div
+                        class="project__content hover:scale-105 duration-700 rounded-lg hover:p-4 hover:shadow-xl hover:shadow-[#25ab75]">
+                        <a href="https://navigo-live-ticketing.netlify.app/" target="_blank">
+                            <img src="assets/img/navigo.PNG" alt="navigos" class="project__img">
+                            <div>
+                                <h3 class="project__title">Navigo</h3>
+                            </div>
+                            <p class="project__description">Navigo is an online ticketing website. Where user can book
+                                seats with there liking. </p>
+                            <button class="project__link">View
+                                Project
+                                <i class="ri-arrow-right-line"></i></button>
+                        </a>
+                    </div>
+                    <!--============== project 2 =============-->
+                    <div
+                        class="project__content hover:scale-105 duration-700 rounded-lg hover:p-4 hover:shadow-xl hover:shadow-[#25ab75]">
+                        <a href="https://habibulalam.github.io/R-a5-Donattion-Website/" target="_blank">
+                            <img src="assets/img/rinterio.PNG" alt="Nike Landing Page"
+                                class="project__img">
+                            <div class="project__link">
+                                <h3 class="project__title">Donate BD</h3>
+                            </div>
+                            <p class="project__description">This is an donation website. People can donate in many events to help others.This is a dynamic website but only Frontend.</p>
+                            <div class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <!--============== project 3 =============-->
+                    <div
+                        class="project__content hover:scale-105 duration-700 rounded-lg hover:p-4 hover:shadow-xl hover:shadow-[#25ab75]">
+                        <a href="https://tasty-grill-a7.netlify.app/" target="_blank">
+                            <img src="assets/img/Tastygrill.PNG" alt="Nike Landing Page"
+                                class="project__img">
+                            <div class="project__link">
+                                <h3 class="project__title">Tasty - Grill</h3>
+                            </div>
+                            <p class="project__description">This is a food/cooking website.People can chose recipes and give order for cooking .This is an api and React based dynamic website.</p>
+                            <div class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- ============== project 4 ============= -->
+
+                </div>
+                <div style="align-items: center;justify-content: center;display: flex; margin-top:10px;"><a
+                        href="/projects.html" class="btn--primary"
+                        style="padding:1.5rem 4rem;margin-top:10px;display: inline-block;align-items:center;text-align:center;justify-content:center;">View
+                        More Projects
+                        <i style="text-align:center;" class="fa-solid fa-angle-down fa-bounce"></i></a></div>
+            </div>
+
+        </section>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        </section>
+
+        <!--=================== Contact ====================-->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="d-grid contact__wrapper">
+                    <div class="contact__content">
+                        <h2 class="contact__title">Interested in working together? Let's talk</h2>
+                        <p class="contact__description">
+                            Ready to work together on your next web project? I'd love to hear from you!
+                            Feel free to get in touch using the contact information below.
+                            Whether uou have a specific project in mind or just want to chat about your software
+                            development needs , I am here to help.
+                            I will respond to your message as quickly as possible and look forward to connecting with
+                            you soon.
+                        </p>
+                    </div>
+                    <div class="contact__btn">
+                        <a style="align-items:center; gap:10px; text-align:center;"
+                            href="https://www.linkedin.com/in/habibul-alam-2a9b13250" class="btn btn--secondary">Get in
+                            touch
+                            <i class="fa-solid fa-handshake"></i></a>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+
+            </div>
+
+            </div>
+        </section>
+    </main>
+    <!--=================== footer ====================-->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="d-grid footer__wrapper"
+                style="display:flex;justify-content:center; align-items:center; text-align:center;">
+                <div class="footer__content">
+                    <h4 class="footer__title">Follow Me</h4>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="mailto:habibhassan.stt20@gmail.com" target="_blank" class="footer__social-link">
+                                <i class="fa-regular fa-envelope fa-beat-fade"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com/in/habibul-alam-2a9b13250" target="_blank"
+                                class="footer__social-link">
+                                <i class="fa-brands fa-linkedin-in fa-beat-fade"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://github.com/habibulalam" target="_blank" class="footer__social-link">
+                                <i class="fa-brands fa-github fa-fade"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <p class="footer__copyright">&copy; 2024 Habibul Alam. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!--=================== SwiperJS  ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--=================== ScrollReveal ==================-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--=================== Main JS ====================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+<script>
+    const typewriterTexts = [
+        "Frontend Web Developer",
+        "Diploma Engineer",
+        "Creative Problem Solver",
+    ];
+
+    let currentTextIndex = 0;
+    let charIndex = 0;
+
+    const typewriterElement = document.getElementById("typewriter");
+
+    function typeEffect() {
+        // Get the current text
+        const currentText = typewriterTexts[currentTextIndex];
+
+        // Update the text content with the next character
+        typewriterElement.textContent = currentText.slice(0, charIndex);
+
+        // Increment the character index
+        charIndex++;
+
+        // If the full text has been typed, pause and then switch to the next text
+        if (charIndex > currentText.length) {
+            setTimeout(() => {
+                charIndex = 0; // Reset character index
+                currentTextIndex = (currentTextIndex + 1) % typewriterTexts.length; // Move to next text
+            }, 2000); // Pause before switching
+        }
+
+        // Continue typing every 100ms
+        setTimeout(typeEffect, 100);
+    }
+
+    // Start the typewriter effect
+    typeEffect();
+</script>
