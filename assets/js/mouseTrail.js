@@ -31,16 +31,17 @@ document.body.appendChild(uiContainer);
 // === Status box ===
 const statusBox = document.createElement('div');
 statusBox.id = 'trailStatus';
-statusBox.innerHTML = '👁️ <span style="color:limegreen;">Mouse Animation is ON</span>';
+statusBox.innerHTML = '👁️ <span style="color:darkgreen;">Mouse Animation is ON</span>';
 Object.assign(statusBox.style, {
-  background: 'rgba(0, 0, 0, 0.7)',
-  color: '#fff',
+  background: 'rgba(255, 255, 255, 0.85)',
+  color: '#111',
   padding: '12px 16px',
   borderRadius: '6px',
   fontSize: '13px',
   marginBottom: '8px',
   whiteSpace: 'nowrap',
-  userSelect: 'none'
+  userSelect: 'none',
+  boxShadow: '0 0 8px rgba(0,0,0,0.15)'
 });
 uiContainer.appendChild(statusBox);
 
@@ -50,46 +51,53 @@ toggleButton.id = 'toggleTrail';
 toggleButton.textContent = 'Click to turn OFF mouse animation';
 Object.assign(toggleButton.style, {
   padding: '12px 16px',
-  backgroundColor: '#d11453', // ON state bg
-  color: '#ffffff',           // ON state text color
+  backgroundColor: '#222', // dark bg
+  color: '#eee',           // light text on dark bg
   border: 'none',
   borderRadius: '6px',
   fontSize: '13px',
   cursor: 'pointer',
   whiteSpace: 'nowrap',
-  transition: 'background 0.3s, color 0.3s'
+  transition: 'background 0.3s, color 0.3s',
+  boxShadow: '0 0 6px rgba(0,0,0,0.2)'
 });
-toggleButton.addEventListener('mouseover', () => toggleButton.style.backgroundColor = '#b01245');
+toggleButton.addEventListener('mouseover', () => {
+  toggleButton.style.backgroundColor = '#111';
+});
 toggleButton.addEventListener('mouseout', () => {
-  toggleButton.style.backgroundColor = trailEnabled ? '#d11453' : 'limegreen';
-  toggleButton.style.color = trailEnabled ? '#ffffff' : '#000000';
+  toggleButton.style.backgroundColor = trailEnabled ? '#222' : '#a2d149';
+  toggleButton.style.color = trailEnabled ? '#eee' : '#222';
 });
 uiContainer.appendChild(toggleButton);
 
 // === Particle Trail Logic ===
 let particles = [];
-let hue = 0;
+let hue = 220; // start from blue hues, dark tones
 let trailEnabled = true;
+
+// Array of coding symbols & keywords for particles
+const codeSymbols = ['{', '}', ';', '()', '[]', 'if', 'else', 'int', 'str', 'var', '==', '!=', '=>'];
+
+let lastParticleTime = 0;
+const particleInterval = 80; // ms between particles
 
 toggleButton.addEventListener('click', () => {
   trailEnabled = !trailEnabled;
 
-  // Update status text and color
   statusBox.innerHTML = trailEnabled
-    ? '👁️ <span style="color:limegreen;">Mouse Animation is ON</span>'
-    : '❌ <span style="color:red;">Mouse Animation is OFF</span>';
+    ? '👁️ <span style="color:darkgreen;">Mouse Animation is ON</span>'
+    : '❌ <span style="color:#b22222;">Mouse Animation is OFF</span>';
 
-  // Update toggle button text and style
   toggleButton.textContent = trailEnabled
     ? 'Click to turn OFF mouse animation'
     : 'Click to turn ON mouse animation';
 
   if (trailEnabled) {
-    toggleButton.style.backgroundColor = '#d11453';
-    toggleButton.style.color = '#ffffff';
+    toggleButton.style.backgroundColor = '#222';
+    toggleButton.style.color = '#eee';
   } else {
-    toggleButton.style.backgroundColor = 'limegreen';
-    toggleButton.style.color = '#000000';
+    toggleButton.style.backgroundColor = '#a2d149'; // dark lime for OFF
+    toggleButton.style.color = '#222';
   }
 
   if (!trailEnabled) {
@@ -100,27 +108,35 @@ toggleButton.addEventListener('click', () => {
 
 document.addEventListener('mousemove', e => {
   if (!trailEnabled) return;
+
+  const now = Date.now();
+  if (now - lastParticleTime < particleInterval) return;
+
+  lastParticleTime = now;
+
   particles.push({
     x: e.clientX,
     y: e.clientY,
     alpha: 1,
-    size: Math.random() * 8 + 4,
-    hue: hue
+    size: Math.random() * 20 + 28,
+    hue: hue,
+    symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)]
   });
-  hue = (hue + 5) % 360;
+  hue = (hue + 10) % 260 + 200; // keep hue in darker blue range (200–260)
 });
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   if (trailEnabled) {
+    // Draw connecting lines between close particles
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 100) {
-          ctx.strokeStyle = `hsla(${particles[i].hue}, 100%, 70%, ${1 - dist / 100})`;
+        if (dist < 150) {
+          ctx.strokeStyle = `hsla(${particles[i].hue}, 70%, 30%, ${1 - dist / 150})`; // darker lines
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
@@ -130,19 +146,22 @@ function animate() {
       }
     }
 
+    // Draw symbols
     particles.forEach((p, i) => {
-      ctx.fillStyle = `hsla(${p.hue}, 100%, 60%, ${p.alpha})`;
-      ctx.shadowColor = `rgba(0, 0, 0, ${p.alpha * 0.6})`;  // black shadow with opacity based on alpha
-      ctx.shadowBlur = 15;
+      ctx.fillStyle = `hsla(${p.hue}, 70%, 20%, ${p.alpha})`; // dark text
+      ctx.shadowColor = `rgba(0, 0, 0, ${p.alpha * 0.9})`;    // stronger black shadow
+      ctx.shadowBlur = 12;
       ctx.shadowOffsetX = 0;
       ctx.shadowOffsetY = 0;
 
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.font = `${p.size}px Consolas, monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
 
-      p.x += (Math.random() - 0.5) * 1.5;
-      p.y += (Math.random() - 0.5) * 1.5;
+      ctx.fillText(p.symbol, p.x, p.y);
+
+      p.x += (Math.random() - 0.5) * 0.7;
+      p.y += (Math.random() - 0.5) * 0.7;
       p.alpha -= 0.015;
 
       if (p.alpha <= 0) particles.splice(i, 1);
