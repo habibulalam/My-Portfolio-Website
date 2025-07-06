@@ -132,8 +132,10 @@ function animate() {
 
     particles.forEach((p, i) => {
       ctx.fillStyle = `hsla(${p.hue}, 100%, 60%, ${p.alpha})`;
-      ctx.shadowColor = `hsla(${p.hue}, 100%, 70%, ${p.alpha})`;
+      ctx.shadowColor = `rgba(0, 0, 0, ${p.alpha * 0.6})`;  // black shadow with opacity based on alpha
       ctx.shadowBlur = 15;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
